@@ -99,6 +99,7 @@ const Header = () => {
                 backgroundColor: "#ffc40c",
                 padding: 10,
                 borderRadius: 6,
+                width: 70,
               }}
             >
               <Text
@@ -106,6 +107,7 @@ const Header = () => {
                   textTransform: "uppercase",
                   fontSize: 14,
                   fontWeight: "500",
+                  textAlign: "center",
                 }}
               >
                 Book
