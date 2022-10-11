@@ -10,8 +10,11 @@ import React from "react";
 
 import movies from "../data/movies.js";
 import Header from "./Header.js";
+import { useNavigation } from "@react-navigation/native";
 
 const MovieCards = () => {
+  const navigation = useNavigation();
+
   return (
     <View>
       <FlatList
@@ -49,6 +52,11 @@ const MovieCards = () => {
             <Text style={{ marginBottom: -10 }}>{item.genre}</Text>
             {/* Сделать отдельный компонент для кнопки*/}
             <Pressable
+              onPress={() => {
+                navigation.navigate("Movie", {
+                  name: item.name,
+                });
+              }}
               style={{
                 backgroundColor: "#ffc40c",
                 padding: 10,
